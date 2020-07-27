@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+    margin: auto;
+}
+
+.content{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: #f1f1f1;
+}
+.fa {
+    padding: 15px;
+    font-size: 25px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-phone {
+    background: #bb0000;
+    color: white;
+}
+
