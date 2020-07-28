@@ -1,6 +1,6 @@
 import React from 'react';
 import RTCMultiConnection from "./RTCMultiConnection.js";
-import nokia from '/nokia.mp3';
+import nokia from './nokia.mp3';
 
 const VideoServer = props => {
 
