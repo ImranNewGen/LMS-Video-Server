@@ -1,5 +1,6 @@
 import React from 'react';
 import RTCMultiConnection from "./RTCMultiConnection.js";
+import nokia from '/nokia.mp3';
 
 const VideoServer = props => {
 
@@ -114,6 +115,7 @@ const VideoServer = props => {
         connection.openOrJoin(props.room, (isRoomExist, roomid, error) => {
             if (connection.isInitiator === true) {
                 setInitiator(true);
+                document.getElementsByClassName("audio-element")[0].play();
             } else {
                 setInitiator(false);
             }
@@ -163,6 +165,7 @@ const VideoServer = props => {
                     localVideo[0].style.width = "25%";
                     video.style.position = "fixed";
                 }
+                document.getElementsByClassName("audio-element")[0].pause();
             }
 
             video.srcObject = event.stream;
@@ -198,7 +201,13 @@ const VideoServer = props => {
         }
     };
 
+
     return <>
+
+        <audio className="audio-element" loop>
+            <source src={nokia}/>
+        </audio>
+
         <div className="content">
             <a onClick={rejectCall} className="fa fa-phone"/>                
             {initiator && <p>Calling...</p>}
