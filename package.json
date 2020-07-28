@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "video": "parcel index.html",
-    "video-build": "parcel build index.html --no-source-maps --out-dir prod"
+    "video-build": "parcel build index.html --no-source-maps --out-dir prod --public-url ./"
   },
   "keywords": [],
   "author": "",
