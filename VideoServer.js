@@ -50,7 +50,7 @@ const VideoServer = props => {
         }
 
         connection.mediaConstraints = {
-            video: videoConstraints,
+            video: props.audio === true ? false : videoConstraints,
             audio: true
         };
 
